@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="limiter">
+		<div class="container-login100">
+            <h3 style="color: white; margin-bottom:auto;">{{first_name}} {{last_name}}</h3>
+            <div class="wrap-login100" style="width:inherit;padding: 50px 50px 50px 50px;">
+				<div>
+					<label>Select Quiz to Proceed</label>
+				<select id="quiz_sel">
+					<option value="">Select Quiz</option>
+					{% for i in quiz_topics %}
+						<option value="{{i.topic_code}}">{{i.topic_name}}</option>
+					{% endfor %}
+				</select>
+				</div>
+            </div>
+		</div>
+	</div>
+{% endblock content %}
